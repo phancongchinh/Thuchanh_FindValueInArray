@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+<body>
+<script>
+    let theArray = [];
+    function addElement () {
+        let i = 0;
+        do {
+            theArray[i] = prompt("Add an element!");
+            i++;
+        } while (confirm("Add more element?"));
+    }
+
+    addElement();
+
+    value = prompt("Enter the value you want to search!");
+
+    function findValue (array) {
+        for (let i = 0; i < array.length; i++) {
+            if (value === array[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    findValue(theArray);
+
+    function displayResult () {
+        if (findValue(theArray) === -1) {
+            alert("The value is not found!");
+        } else {
+            alert("The value has been found. Index = " + findValue(theArray));
+        }
+    }
+
+    displayResult();
+
+</script>
+</body>
+</html>
